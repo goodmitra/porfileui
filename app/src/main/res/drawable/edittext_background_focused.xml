@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Default state -->
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="2dp"
+                android:color="@color/chat_color_receiver"/> <!-- Change the color to the desired default border color -->
+            <corners android:radius="8dp"/> <!-- Change the radius to control the corner roundness -->
+        </shape>
+    </item>
+</selector>

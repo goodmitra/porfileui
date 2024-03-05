@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lavender"
+    android:orientation="vertical"
+    tools:context=".Registration"
+    android:gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        android:scrollY="@dimen/cardview_default_elevation"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@string/logo"
+                    android:src="@drawable/logo" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:scaleType="centerInside"
+                    android:text="@string/registerTag"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck"/>
+            </LinearLayout>
+
+            <!--<com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="match_parent"
+                android:layout_height="137dp"
+                android:scaleType="centerCrop"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/reg" />-->
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:autofillHints="@string/usernameId"
+                android:drawableStart="@drawable/ic_user"
+                android:drawablePadding="8dp"
+                android:textColor="@color/black"
+                android:ems="10"
+                android:hint="@string/usernameId"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/defaltbg"
+                android:inputType="textPersonName"
+                android:scaleType="centerInside" />
+
+            <EditText
+                android:id="@+id/etMobile"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:autofillHints="@string/mobile"
+                android:drawableStart="@drawable/ic_mobile"
+                android:drawablePadding="8dp"
+                android:textColor="@color/black"
+                android:ems="10"
+                android:hint="@string/mobile"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/defaltbg"
+                android:inputType="textEmailAddress"
+                android:scaleType="centerInside" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <EditText
+                android:id="@+id/dateEdit"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_date"
+                android:hint="@string/SelectDate"
+                android:textColor="@color/black"
+                android:inputType="none"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/defaltbg"
+                android:onClick="showDatePickerDialog"
+                tools:ignore="TextFields" />
+
+            <Spinner
+                android:id="@+id/genderSpinner"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:background="@drawable/defaltbg"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <Spinner
+                android:id="@+id/jobSpinner"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/defaltbg"
+                android:textColor="@color/black"
+                android:spinnerMode="dropdown"/>
+
+            <Spinner
+                android:id="@+id/salarySpinner"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:background="@drawable/defaltbg"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:layout_marginStart="15dp"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <Spinner
+                android:id="@+id/stateSpinner"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:background="@drawable/defaltbg"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:spinnerMode="dropdown"/>
+
+            <Spinner
+                android:id="@+id/districtSpinner"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/defaltbg"
+                android:drawablePadding="8dp"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:spinnerMode="dropdown"/>
+        </LinearLayout>
+
+            <EditText
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:autofillHints="@string/username"
+                android:drawableStart="@drawable/ic_userid"
+                android:drawablePadding="8dp"
+                android:textColor="@color/black"
+                android:ems="10"
+                android:hint="@string/username"
+                android:background="@drawable/defaltbg"
+                android:layout_marginTop="10dp"
+                android:inputType="textPersonName"
+                android:scaleType="centerInside" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:autofillHints="@string/password"
+                android:drawableStart="@android:drawable/ic_secure"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:textColor="@color/black"
+                android:hint="@string/password"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/defaltbg"
+                android:inputType="textPassword"
+                android:scaleType="centerInside" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/register"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/defaltbg"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="@string/re_login"
+                android:textAlignment="center"
+                tools:ignore="TextSizeCheck"/>
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:indeterminate="false" />
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
